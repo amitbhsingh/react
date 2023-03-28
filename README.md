@@ -1,7 +1,31 @@
 # Path to react developer
 ## Path to become developer Learning Jvavascript 
-[Learning react](https://www.youtube.com/watch?v=w7ejDZ8SWv8&t=2596s)
+[Learning Javascript](https://www.youtube.com/watch?v=PkZNo7MFNFg)
+> Notes from the video
+### Comments
+// inline comment <br>
+/* this is a <br>
+multiline comment */
+### Data types:
+> Undefined, null, boolean, string, symbol, number, and object  <br>
+### Variable:
+> var myName='Amitk' any of the data types can be chosen from above
+> let ourName= 'freecodecamp' 
+> cosnt pi=3.14 const is a variable that will never change
+### Storing varibales
+> var a; // add semicolon at end of the line * not mandatory *
+> var a=2; 
+> var b=a;
+### to print
+console.log(b)
 
+
+
+
+
+[Learning React](https://www.youtube.com/watch?v=w7ejDZ8SWv8&t=2596s)
+> Notes from the video above
+###
 
 
 ### What should you know first to be able to jump to react?

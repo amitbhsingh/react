@@ -1,5 +1,5 @@
-# Path to react developer
-## Path to become developer Learning Jvavascript 
+# Path to React Developer
+## Path to become developer Learning Javascript 
 [Learning Javascript](https://www.youtube.com/watch?v=PkZNo7MFNFg)
 > Notes from the video
 ### Comments

@@ -28,3 +28,29 @@ console.log(our2array)
 var our3array=[4,5,['dog,1']];
 var removedfromourarray=our2array.unshift(["paul",35]);
 console.log(our2array)
+
+/* Write reusable code function  */
+function ourReusableFunction(){
+    console.log("hey, wolrd!");
+}
+ourReusableFunction();
+
+/* passing values to functions with arguments */
+function ourFunctionwithargs(a,b){
+    console.log(a-b);
+}
+ourFunctionwithargs(10,5);
+
+/* Glocbal scope and functioning */
+function fun1(){
+    
+}
+function fun2(){
+    var output="";
+    if (typeof myGlobal != "undefined"){
+        output+= "oopsGlobal: "+oopsGlobal;
+    }
+    console.log(output);
+}
+fun1();
+fun2();

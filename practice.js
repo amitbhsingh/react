@@ -18,3 +18,13 @@ console.log(our1array)
 var our2array=[1,2,3];
 var removedfromourarray=our2array.pop();
 console.log(our2array)
+
+/* Manipulating arrays with shift() */
+
+var our3array=[4,5,6];
+var removedfromourarray=our2array.shift();
+console.log(our2array)
+/* Manipulating arrays with unshift() */
+var our3array=[4,5,['dog,1']];
+var removedfromourarray=our2array.unshift(["paul",35]);
+console.log(our2array)

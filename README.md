@@ -1,5 +1,7 @@
-# Path to React Developer
-## Path to become developer Learning Javascript 
+# Path to React Developer:
+- Primary step getting familiar with javascript <br>
+- Brush up HTML CSS <br>
+- Finally React
 [Learning Javascript](https://www.youtube.com/watch?v=PkZNo7MFNFg)
 > Notes from the video
 ### Comments

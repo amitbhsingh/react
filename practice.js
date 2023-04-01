@@ -54,3 +54,17 @@ function fun2(){
 }
 fun1();
 fun2();
+/* function of minues */
+function minusseven(num){
+    return num -7;
+}
+console.log(minusseven(10))
+/* understanding undefined value returned from a function */
+var summ =0;
+function addThree(){
+    sum =sum +3;
+}
+function addFive(){
+    sum+=5;
+
+}

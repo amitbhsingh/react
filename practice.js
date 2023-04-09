@@ -123,3 +123,136 @@ function testequal(val){
 }
 console.log(testequal('12'));
 // == is not strict equality check but === is strick
+/* elseif*/
+function testelseif(val){
+    if (val>10){
+        return "Greater than 10";
+
+    } else if (val<5){
+        return "smaller than 5";
+    } else
+    return "Between 5 and 10";
+}
+console.log(testelseif(4));
+/* Logical order in if else statements*/
+function testelseif(val){
+    if (val<5){
+        return "Greater than 10";
+    } else if (val<10){
+        return "smaller than 5";
+    } else {
+    return "Between 5 and 10";
+    }
+}
+console.log(testelseif(3));
+
+/* Chaining if else*/
+function testsize(num){
+    if (num<5) {
+        return "tiny"
+    }
+    else if (num <10) {
+        return "small"
+    } else if (num <15) {
+        return "medium" 
+    } else if (num <20) {
+        return "Large"
+    } else {
+        return "huge"
+    }
+}
+console.log(testsize(7));
+console.log(testsize(15));
+console.log(testsize(19));
+/* using data */
+var names=["Hole",
+"eagle","birdie","par","bogey","2bogey","home"]
+function golfscore(par,strokes){
+    if (strokes==1) {
+        return names[0]
+    } else if (strokes <=par - 2){
+        return names[1]
+    } else if (strokes==par - 1){
+        return names[2]
+    }else if (strokes==par){
+        return names[3]
+    } else if (strokes == par +1){
+        return names[4]
+    } else if (strokes == par+2){
+        return names[5]
+    } else if (strokes >= par +3){
+        return names[6]
+    }
+    
+}
+console.log(golfscore(2,3));
+/* case in switch */
+function caseinswitch(val){
+    var answer="";
+    switch(val){
+        case 1:
+            answer="alpha";
+            break;
+        case 2:
+            answer="beta";
+            break;
+        case 3:
+            answer="gamma";
+            break;
+        case 4:
+            answer="delta";
+            break;
+    }
+    return answer;
+}
+console.log(caseinswitch(2))
+/* default in switch statement */
+
+function caseinswitch(val){
+    var answer="";
+    switch(val){
+        case 1:
+            answer="alpha";
+            break;
+        case 2:
+            answer="beta";
+            break;
+        case 3:
+            answer="gamma";
+            break;
+        case 4:
+            answer="delta";
+            break;
+        default:
+            answer="stuff";
+            break;
+
+    }
+    return answer;
+}
+console.log(caseinswitch("a"))
+
+/* default in switch statement */
+function sequan(val){
+    var answer=":";
+    switch(val){
+        case 1:
+        case 2:
+        case 3:
+            answer ="low";
+            break;
+        case 4:
+        case 5:
+        case 6:
+            answer ="mid";
+            break;
+        case 7:
+        case 8:
+        case 9:
+            answer ="high";
+            break;
+    
+    }
+    return answer
+}
+console.log(sequan(11));

@@ -5,12 +5,14 @@
 # 1 
 [Learning Javascript](https://www.youtube.com/watch?v=PkZNo7MFNFg)
 > Notes from the video
+##### Array:[] square brackets
+##### Objects: {} curly brackets
 ### Comments
 // inline comment <br>
 /* this is a <br>
 multiline comment */
 ### Data types:
-> Undefined, null, boolean, string, symbol, number, and object  <br>
+#> Undefined, null, boolean, string, symbol, number, and object  <br>
 ### Variable:
 > var myName='Amitk' any of the data types can be chosen from above
 > let ourName= 'freecodecamp' 

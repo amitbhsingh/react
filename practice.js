@@ -256,3 +256,137 @@ function sequan(val){
     return answer
 }
 console.log(sequan(11));
+/* returning early pattern from functions */
+function abtest(a,b){
+    if (a<0 || b< 0){
+        return undefined;
+    }
+    return Math.round(Math.pow(Math.sqrt(a)+ Math.sqrt(b),2))
+
+}
+console.log(abtest(-2,2))
+/* black jack card counting */
+var count =0; 
+function cc(card){
+    switch(card) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            count++;
+            break;
+        case 10:
+        case "J":
+        case "Q":
+        case "A":
+            count--;
+            break;
+        
+    }
+    var holdbet= "Hold"
+    if (count >0) {
+        holdbet = "bet"
+    }
+
+    return count + " " + holdbet;
+}
+cc(2); cc('K'); cc(10); cc('K'); cc('A'); 
+console.log(cc(4))
+/* build javascript objects */
+var ourdog={
+    "name": "camper",
+    "legs": 4,
+    "trails": 1,
+    "friends": ["everything"]
+};
+
+var mydog={
+    "name": "Quincy",
+    "legs": 3,
+    "tails": 2,
+    "friends":[]
+}
+/* accesing object property with dot notation */
+var testobj={
+    "hat": "ballcap",
+    "shirt": "jersey",
+    "shoes": "cleats"
+};
+var hatValue=testobj.hat;
+var shirtValue=testobj.shirt;
+console.log(shirtValue)
+/* testing objects for properties */
+var myobj={
+    "hat": "ballcap",
+    "shirt": "jersey",
+    "shoes": "cleats"
+};
+
+function checkobj(checkprop){
+    if (myobj.hasOwnProperty(checkprop)){
+        return myobj[checkprop];
+    }  else {
+            return "not found";
+        }
+    
+}
+
+console.log(checkobj("hello"));
+/* manipulating complex objects */
+var mymusic= [
+    {
+        "artist": "billy joel",
+        "title": "piano man",
+        "release_year":1973,
+        "formats":[
+            "cd",
+            "8t",
+            "lp"
+        ],
+        "gold":true
+    },
+    {
+        "artist":"bew",
+        "title":"cereal",
+        "realease": 2098,
+        
+    }
+];
+
+/* accesing nested objects */
+var myray=[];
+for (var i =0; i < 10; i++){
+    myray.push(i);
+}
+console.log(myray)
+for (var i=1; i<6; i++){
+    myray.push(i);
+}
+console.log(myray);
+/*count backwards for loop */
+var ourarray=[] 
+for (var i=10; i>0; i-=2){
+    ourarray.push(i);
+}
+console.log(ourarray);
+/*iterate through an array with a for loop */
+var arr=[10,4,5,6,123,123,34]
+var total=0
+for (var i=0;i<arr.length;i++){
+    total+=arr[i];
+}
+console.log(total);
+/*nesting for loops */
+function multiplya(arra){
+    var product =1;
+    for (var i=0; i<arra.length;i++){
+        for (var j=0;j<arra[i].length; j++) {
+            product *= arra[i][j]
+        }
+    }
+    return product;
+}
+var product=multiplya([[1,2],[3,4],[5,6,7]]);
+console.log(product);
+/*itereate with do... while loops */

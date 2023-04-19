@@ -6,7 +6,7 @@ var ourarray= [50,60,70];
 var ourdata=ourarray[0];
 console.log(ourdata)
 
-/* modiy arrays with indexes */
+/* modify arrays with indexes */
 var our0array=["one","two",3]
 ouarray=our0array[2]
 console.log(ouarray)
@@ -389,4 +389,190 @@ function multiplya(arra){
 }
 var product=multiplya([[1,2],[3,4],[5,6,7]]);
 console.log(product);
-/*itereate with do... while loops */
+/*itereate with DO while loops */
+var myarray=[];
+var i=10;
+do {
+    myarray.push(i);
+    i++;
+} while (i<5)
+console.log(i,myarray)
+/* Random whole number generator */
+function rndm(){
+    return Math.floor(Math.random()*30);
+}
+console.log(rndm());
+/* Random fraction generator */
+function rndmf(){
+    return Math.random();
+}
+console.log(rndmf());
+function rndmr(mymin,mymax){
+    return Math.floor(Math.random()* (mymax-mymin+1))+mymin;
+}
+var myrnd=rndmr(35,39);
+console.log(myrnd)
+/* convert to integer */
+function cnvrt(str){
+    return parseInt(str,2);
+}
+console.log(cnvrt("10011"))
+/* use the conditional ternary opeerator*/
+function checke(a,b){
+
+    return a===b? true : false;
+    
+    
+}   
+console.log(checke(1,2));
+/* use multiple conditional ternary opeerator*/
+function checks(num){
+    return num>0? "postive" : num<0 ?"negative": "zero"
+    
+}   
+console.log(checks(0));
+/* differences between var and let keyword*/
+let catname="quincy";
+let quote;
+catname="amit";
+function cattalk(){
+    "use strict";
+    catname="oliver";
+    quote=catname +"says meow";
+}
+console.log(cattalk);
+/* const let and var ????*/
+/* Mutate an array declared with const*/
+const s =[5,6,7];
+function editinplace(){
+    "use strict";
+    s[0]=2;
+    s[1]=5;
+    s[2]=7;
+}
+editinplace();
+console.log(s);
+/* Prevent object mutation*/
+/* class syntax*/
+class spaces{
+    constructor(targetplanet){
+        this.targetplanet=targetplanet;
+    }
+
+}
+var zeus=new spaces('Jupiter');
+console.log(zeus.targetplanet)
+
+/* class syntax*/
+function makeclass(){
+    class vegetable{
+        constructor(name){
+            this.name=name;
+        }
+    }
+    return vegetable;
+}
+const vegetable=makeclass();
+const carrot=new vegetable('carrot');
+console.log(carrot.name)
+/* use getters and setters to control access to an object */
+class book {
+    constructor(author){
+        this._author=author;
+
+    }
+    //getter
+    get writer(){
+        return this._author;
+    }
+    //setter
+    set writer(updatedauthor){
+        this._author=updatedauthor;
+    }
+
+}
+var magic=() => new Date();
+console.log(magic());
+/* arrow function */
+const myconcat= (arr1,arr2)=> arr1.concat(arr2);
+console.log(myconcat([1,2],[3,4,5])); 
+/* arrow function with higher order */
+const realn=[4,5.6,-9.8,3.14,42,6,8.34,-2]
+const squarelist=(arr)=>{
+    const squareint=arr.filter(num => Number.isInteger(num)&& num>0).map(x => x*x);
+    return squareint;
+};
+const squareint=squarelist(realn);
+console.log(squareint);
+/* rest operator with arrow function */
+const sum=(function(){
+    return function sum(...args){
+        return args.reduce((a,b)=>a+b,0);
+    };
+}) ();
+console.log(sum(1,2,3,4));
+/* spread operator with arrow function */
+const arrw=['Jan','Feb','Mar','Apr','May']
+let arrx;
+(function(){
+    arrx=[...arrw];
+    arrw[0]='potato'
+
+})();
+console.log(arrx);
+/* desctructuring an assignment */
+/* var voxel=[x:3,y:7.4,z:6.54];
+var x =voxel.x;
+var y= voxel.y;
+var z=voxel.z;
+////
+ *///const {x:a,y:b,z:c}=voxel;
+const avg_temp={
+    today:77.5,
+    tomorrow:79
+};
+function gettemp(avg_temp){
+    "use strict";
+    const{ tomorrow:temptom}=avg_temp;
+    return temptom;
+
+}
+console.log(gettemp(avg_temp));
+const x={
+    min:12,
+    max:48,
+    std:22
+};
+const half =(function(){
+    return function half({max,min}){
+        return(max+min)/2.0;
+    };
+})();
+console.log(x);
+console.log(half(x));
+
+/* template literal */
+const person ={
+    name:'AMit',
+    age:38
+};
+const greeting =`hello, my name is ${person.name}! I am ${person.age} years old. `;
+console.log(greeting);
+// Doubling each element in an array
+const numbers = [1, 2, 3, 4, 5];
+const doubledNumbers = numbers.map(nu => nu * 2);
+console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+
+function prepareGreeting(typeOfPet, numberOfPets) { 
+    var greeting = '';
+    for (let i = 0; i < numberOfPets; i++) {
+      if (typeOfPet === 'cat') { 
+        greeting += 'meow' + '<br/>';
+      }
+      if (typeOfPet === 'dog') { 
+        greeting += 'woof' + '<br/>';
+      }
+    }
+    return greeting;
+  }
+  console.log(prepareGreeting("dog",2))

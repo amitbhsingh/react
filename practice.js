@@ -576,3 +576,83 @@ function prepareGreeting(typeOfPet, numberOfPets) {
     return greeting;
   }
   console.log(prepareGreeting("dog",2))
+  function nextInLine(arr, item) {
+    // Only change code below this line
+    arr.push(item);
+    const removed= arr.shift(item);
+    return removed;
+    // Only change code above this line
+  }
+  
+  // Setup
+  let testArr = [1, 2, 3, 4, 5];
+  
+  // Display code
+  console.log("Before: " + JSON.stringify(testArr));
+  console.log(nextInLine(testArr, 6));
+  console.log("After: " + JSON.stringify(testArr));
+  switch (new Date().getDay()) {
+    case 0:
+      day = "Sunday";
+      break;
+    case 1:
+      day = "Monday";
+      break;
+    case 2:
+       day = "Tuesday";
+      break;
+    case 3:
+      day = "Wednesday";
+      break;
+    case 4:
+      day = "Thursday";
+      break;
+    case 5:
+      day = "Friday";
+      break;
+    case 6:
+      day = "Saturday";
+  }
+  
+  // Setup
+const contacts = [
+    {
+      firstName: "Akira",
+      lastName: "Laine",
+      number: "0543236543",
+      likes: ["Pizza", "Coding", "Brownie Points"],
+    },
+    {
+      firstName: "Harry",
+      lastName: "Potter",
+      number: "0994372684",
+      likes: ["Hogwarts", "Magic", "Hagrid"],
+    },
+    {
+      firstName: "Sherlock",
+      lastName: "Holmes",
+      number: "0487345643",
+      likes: ["Intriguing Cases", "Violin"],
+    },
+    {
+      firstName: "Kristian",
+      lastName: "Vos",
+      number: "unknown",
+      likes: ["JavaScript", "Gaming", "Foxes"],
+    },
+  ];
+  
+  function lookUpProfile(name, prop) {
+    for (let i = 0; i < contacts.length; i++) {
+      if (contacts[i].firstName === name) {
+        if (contacts[i].hasOwnProperty(prop)) {
+          return contacts[i][prop];
+        } else {
+          return "No such property";
+        }
+      }
+    }
+    return "No such contact";
+  }
+  console.log(lookUpProfile("Kristian","likes"));
+  

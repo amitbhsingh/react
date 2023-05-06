@@ -656,3 +656,71 @@ const contacts = [
   }
   console.log(lookUpProfile("Kristian","likes"));
   
+
+ 
+
+
+
+  
+  // Example usage:
+  
+ 
+  
+  
+  
+  function sumNumbers(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      if (typeof arr[i] === 'number') {
+        sum += arr[i];
+      }
+    }
+    return sum;
+  }
+  
+  const myArray = [1, 'two', 3, 'four', 5];
+  const result = sumNumbers(myArray); // returns 9 (1 + 3 + 5)
+  console.log(result)
+  function sumn(arr){
+    let i=0
+    let tot=0
+    while(i<arr.length){
+        if(typeof arr[i]==='number'){
+            tot+=arr[i];
+            
+        }
+        i++
+    }
+    return tot
+  }
+  var res=sumNumbers(myArray)
+  console.log(res)
+
+
+  function sumb(arr){
+    
+    let s=0;
+    for (i=0;i<arr.length;i++){
+        if(typeof arr[i]==='numbers'){
+            s+=arr[i] //s+= means s=s+arr[i]
+        }
+        return s;
+        
+    }
+    
+
+  }
+
+  var res=sumb(myArray)
+  console.log(res)
+function mixx(arr){
+    let tot=0;
+    for (let i=0;i<arr.length;i++){
+        if (typeof arr[i]==='number'){
+            tot+=arr[i];
+        }
+        return tot;
+    }
+}
+var mx=[1,2,3,4,5,6,10,'j','one']
+console.log(mixx(mx));

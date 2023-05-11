@@ -724,3 +724,84 @@ function mixx(arr){
 }
 var mx=[1,2,3,4,5,6,10,'j','one']
 console.log(mixx(mx));
+
+//class
+class Flower{
+    constructor(color){
+    this.color=color
+}
+getColor(){
+    return this.color
+
+}
+setColor(){
+    this.color=color
+
+    }
+
+}
+let flowerOne= new Flower('green')
+let flowerTwo=new Flower('blue')
+console.log(flowerOne.getColor())
+flowerOne.setColor('pink')
+console.log(flowerOne.getColor())
+
+// iterate over all properties
+function Dog(name) {
+    this.name = name;
+  }
+  
+  Dog.prototype.numLegs = 4;
+  
+  let beagle = new Dog("Snoopy");
+  
+  let ownProps = [];
+  let prototypeProps = [];
+  for(let property in beagle){
+    if(beagle.hasOwnProperty(property)){
+      ownProps.push(property);
+    }else {
+      prototypeProps.push(property);
+    }
+  }
+  console.log(ownProps);
+  console.log(prototypeProps);
+  
+  
+  /*Remember to Set the Constructor Property when Changing the Prototype
+There is one crucial side effect of manually setting the prototype to a new object. It erases the constructor property! This property can be used to check which constructor function created the instance, but since the property has been overwritten, it now gives false results:
+
+duck.constructor === Bird;
+duck.constructor === Object;
+duck instanceof Bird;
+In order, these expressions would evaluate to false, true, and true.
+
+To fix this, whenever a prototype is manually set to a new object, remember to define the constructor property:
+
+Bird.prototype = {
+  constructor: Bird,
+  numLegs: 2,
+  eat: function() {
+    console.log("nom nom nom");
+  },
+  describe: function() {
+    console.log("My name is " + this.name); 
+  }
+};
+Define the constructor property on the Dog prototype. */
+  
+  function Dog(name) {
+    this.name = name;
+  }
+  
+  // Only change code below this line
+  Dog.prototype = {
+  
+    numLegs: 4,
+    eat: function() {
+      console.log("nom nom nom");
+    },
+    describe: function() {
+      console.log("My name is " + this.name);
+    }
+  };

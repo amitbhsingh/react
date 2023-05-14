@@ -726,6 +726,7 @@ var mx=[1,2,3,4,5,6,10,'j','one']
 console.log(mixx(mx));
 
 //class
+/*
 class Flower{
     constructor(color){
     this.color=color
@@ -805,3 +806,16 @@ Define the constructor property on the Dog prototype. */
       console.log("My name is " + this.name);
     }
   };
+
+
+
+  var containsDuplicate = function(nums) {
+   nums.sort();
+    for (let i = 0; i < nums.length - 1; i++) {
+        if (nums[i] === nums[i + 1]) {
+            return true;
+        }
+    }
+    
+    return false;
+};

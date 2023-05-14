@@ -1,51 +1,17 @@
-//constructor
-
-
-class Node{
+class Node {
     constructor(value){
-        this.value=value
-        this.next=null
-    }
-    
-}
-const newNode=new Node(4)
-
-class Linkedlist{
-    constructor(value){
-        const newNode=new Node(value)
-        this.head=newNode
-        this.tail=this.head
-        this.length=1
-
-        }
-    }
-    let mylinkedlist=new Linkedlist(4)
-    console.log(mylinkedlist)
-    class pork{
-        constructor(done){
-            this.done=done
-            this.next=null
-        }
-    }
-    // WRITE NODE CLASS HERE //
-//                       //
-//                       //
-//                       //
-//                       //
-///////////////////////////
-class temperatur{
-    constructor value{
-        this.value=value
+        this.value = value;
+        this.next = null;
     }
 }
-
+ 
 class LinkedList {
-	// WRITE LL CONSTRUCTOR HERE //
-	//                           //
-	//                           //
-	//                           //
-	//                           //
-	///////////////////////////////
+    constructor(value) {
+        const newNode = new Node(value);
+        this.head = newNode;
+        this.tail = this.head;
+        this.length = 1;
+    }
 
     printList() {
         let temp = this.head;
@@ -75,18 +41,75 @@ class LinkedList {
         console.log("Length: " + this.length);
     }
 
+    makeEmpty() {
+        this.head = null;
+        this.tail = null;
+        this.length = 0;
+    }
+ 
+    push(value) {
+        const newNode = new Node(value);
+        if (!this.head) {
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            this.tail.next = newNode;
+            this.tail = newNode;
+        }
+        this.length++;
+        return this;
+    }
+ 
+    pop() {
+        if (this.length === 0) return undefined;
+        let temp = this.head;
+        let pre = this.head;
+        while (temp.next) {
+            pre = temp;
+            temp = temp.next;
+        }
+        this.tail = pre;
+        this.tail.next = null;
+        this.length--;
+        if (this.length === 0) {
+            this.head = null;
+            this.tail = null;
+        }
+        return temp;
+    }
+     
 }
-
+ 
 
 function test() {
-    let myLinkedList = new LinkedList(4);
-    
-    myLinkedList.getHead();
-    myLinkedList.getTail();
-    myLinkedList.getLength();
-    console.log("\nLinked List:");
-    myLinkedList.printList();
+    let myLinkedList = new LinkedList(1);
+    myLinkedList.push(2);
+
+    // (2) Items in LL - Returns 2 Node
+    if (myLinkedList.length !== 0) {
+        console.log(myLinkedList.pop().value);
+    } else {
+        console.log("null");
+    }
+
+    // (1) Item in LL - Returns 1 Node
+    if (myLinkedList.length !== 0) {
+        console.log(myLinkedList.pop().value);
+    } else {
+        console.log("null");
+    }
+
+    // (0) Items in LL - Returns null
+    if (myLinkedList.length !== 0) {
+        console.log(myLinkedList.pop().value);
+    } else {
+        console.log("null");
+    }
+
 }
 
 
-test();
+ test();
+
+ 
+ 
